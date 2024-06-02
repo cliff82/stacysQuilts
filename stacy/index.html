@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple">
+   <title>Stacy's Quilts</title>
+</head>
+
+<style>
+   .w3-lobster {
+     font-family: "Lobster", Sans-serif;
+     
+   }
+   </style>
+<body>
+
+
+   <div id="home" class="w3-container w3-center w3-pink w3-lobster font-effect-shadow-multiple"  > 
+
+      <div class="w3-padding-large w3-padding-48">
+      <img src="/pics/girl.jpg" width="200px" height="210px" class="w3-circle" alt="girl">
+
+      <div class="w3-dropdown-hover ">
+         <button class="w3-button w3-leftbar w3-rightbar w3-border-purple w3-round-xxlarge w3-pale-red w3-text-purple w3-hover-green">Your Guide Here</button>
+         <div class="w3-dropdown-content w3-bar-block w3-pink ">
+           <a href="#blueWhite" class="w3-bar-item w3-button w3-hover-pink w3-hover-text-purple w3-text-pale-red">Samples</a>
+           <a href="#order" class="w3-bar-item w3-button w3-hover-pink w3-hover-text-purple w3-text-pale-red">Order</a>
+           <a href="#contact" class="w3-bar-item w3-button w3-hover-pink w3-hover-text-purple w3-text-pale-red">Contact</a>
+         </div>
+
+   </div>
+
+<H1 style="font-size: 380%;" class="w3-center w3-text-purple w3-cursive ">Stacy's Quilts</H1>
+
+<div class="w3-content w3-section " style="max-width:400px">
+   <img class="mySlides1" src="/pics/blueWhite.jpg" style="width:100%">
+   <img class="mySlides1" src="/pics/fabric.jpg" style="width:100%">
+   <img class="mySlides1" src="/pics/quilt.jpg" style="width:100%">
+ </div>
+
+
+ <h2 style="font-size: 310%;" class="w3-text-deep-purple w3-cursive " >Take a look around and see what you like.</h2>
+ <p style="font-size: 180%;" class="w3-text-purple w3-cursive" >I hand make all my quilts</p>
+ <p style="font-size: 180%;" class="w3-text-purple w3-cursive" >These quilts are able to be use all four seasons.</p>
+
+   <div  class="w3-content w3-padding-32 " style="max-width:70%; ">
+      
+      <img   class="mySlides " src="/pics/blueWhite.jpg" style="width:100%;display:none">
+      <img  class="mySlides" src="/pics/fabric.jpg" style="width:100%">
+      <img class="mySlides" src="/pics/quilt.jpg" style="width:100%;display:none">
+      
+      <p id="blueWhite" style="font-size: 180%;" class="w3-text-purple">Samples Here</p>
+
+      <div class="w3-row-padding w3-section ">
+        <div class="w3-col s4">
+          <img class="demo w3-opacity w3-hover-opacity-off" height="220px" src="/pics/blueWhite.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+        </div>
+        <div class="w3-col s4">
+          <img class="demo w3-opacity w3-hover-opacity-off" height="220px" src="/pics/fabric.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+        </div>
+        <div class="w3-col s4">
+          <img class="demo w3-opacity w3-hover-opacity-off" height="220px" src="/pics/quilt.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+        </div>
+        
+      </div>
+
+      <div class="w3-center">
+         <h1 id="order" class="w3-text-deep-purple w3-cursive">Order here With Name and Phone Number</h1>
+         <h2 class="w3-text-purple w3-cursive">Cash App Below</h2>
+         <h2 class="w3-text-green">Cash app link goes here $$$$$$$$$$$</h2>
+
+      </div>
+
+      <div class="w3-bar "style="padding-bottom: 20px;padding-top: 40px">
+         <a href="#" class="w3-bar-item w3-button w3-blue"><i class="fa fa-facebook-official"></i></a>
+         <a id="contact" href="#" class="w3-bar-item w3-button w3-blue-gray"><i class="fa fa-envelope" ></i></a>
+         <a  href="#" class="w3-bar-item w3-button w3-khaki"><i class="fa fa-phone" ></i></a>
+       </div> <br>
+     
+       <a style="text-decoration: none;font-size: 150%;" class="w3-text-blue " href="https://clifftonjamessr.netlify.app">Get Your Website Created Here </a> <br>
+
+       <a  href="#home" class="w3-bar-item w3-button w3-khaki"><i class="fa fa-home" >Back To The Top</i></a>
+    </div>
+
+    <script>
+      function currentDiv(n) {
+        showDivs(slideIndex = n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " w3-opacity-off";
+      }
+
+      var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides1");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+      </script>
+    
+</body>
+</html>
